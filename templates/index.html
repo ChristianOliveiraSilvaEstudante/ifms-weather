@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFMS Weather</title>
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='media/logo.png') }}" type="image/x-icon">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+    <main>
+        <header>
+            <h2 class="title">IFMS <span class="text-blue">Weather</span></h2>
+        </header>
+
+        <form>
+            <input id="lat-input" placeholder="LAT" value="-23.55" autocomplete="off" />
+            <input id="lon-input" placeholder="LON" value="-46.63" autocomplete="off" />
+            <button type="button" id="search-button" class="btn">Pesquisar</button>
+        </form>
+
+        <section>
+            <h4 class="subtitle">Pesquisa</h4>
+            <table id="recent-table">
+                <tr>
+                    <th>
+                        <p>LOCAL</p>
+                    </th>
+                    <th>
+                        <p>TEMPERATURA</p>
+                    </th>
+                    <th>
+                        <p>SENSAÇÃO TÉRMICA</p>
+                    </th>
+                    <th>
+                        <p>VELOCIDADE DO VENTO</p>
+                    </th>
+                    <th>
+                        <p>HUMIDADE RELATIVA</p>
+                    </th>
+                    <th>
+                        <p>PRESSÃO AO NÍVEL DO MAR</p>
+                    </th>
+                    <th>
+                        <p>ÍNDICE UV</p>
+                    </th>
+                </tr>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
