@@ -18,8 +18,8 @@
         </header>
 
         <form>
-            <input id="lat-input" placeholder="LAT" value="-23.55" autocomplete="off" />
-            <input id="lon-input" placeholder="LON" value="-46.63" autocomplete="off" />
+            <input id="lat-input" placeholder="LAT" autocomplete="off" />
+            <input id="lon-input" placeholder="LON" autocomplete="off" />
             <button type="button" id="search-button" class="btn">Pesquisar</button>
         </form>
 
@@ -49,6 +49,17 @@
                         <p>ÍNDICE UV</p>
                     </th>
                 </tr>
+                {% for result in results %}
+                    <tr>
+                        <td>{{ result.lat }}/{{ result.lon }}</td>
+                        <td>{{ result.temperature }}</td>
+                        <td>{{ result.felttemperature }}</td>
+                        <td>{{ result.windspeed }}</td>
+                        <td>{{ result.relativehumidity }}</td>
+                        <td>{{ result.sealevelpressure }}</td>
+                        <td>{{ result.uvindex }}</td>
+                    </tr>
+                {% endfor %}
             </table>
         </section>
     </main>
